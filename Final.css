@@ -99,6 +99,29 @@ body{
     .fa-instagram{
       color: rgb(198, 6, 93);
     }
+    .profile-card {
+      position: relative;
+      font-family: sans-serif;
+      width: 300px;
+      height: 300px;
+      /* background-image: linear-gradient(to left top, #a40528, #9a003a, #890049, #730056, #57055f, #5a0a60, #5d0f62, #601363, #81145e, #9b1f55, #b0334c, #be4b42); */
+      background-image: linear-gradient(to right top, #b9411a, #c95e12, #d67a05, #e09700, #e5b500, #e8b400, #eab400, #edb300, #ed9200, #ea7000, #e24a14, #d60f23);
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 0 22px #3336;
+      transition: .2s;
+      margin: 0 25px;
+    }
+    .profile-card .img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: .2s;
+      z-index: 99;
+      /* margin-bottom: 100px; */
+      /* bottom: 50px; */
+      
+    }
 }
 
 
@@ -117,7 +140,7 @@ body{
     padding: 15px;
     border-radius: 50%;
     box-shadow: 0 0 22px #3336;
-    transition: .2s;
+    transition: .6s;
     margin: 0 25px;
   }
   
@@ -132,7 +155,7 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
-    transition: .2s;
+    transition: .6s;
     z-index: 99;
     /* margin-bottom: 100px; */
     /* bottom: 50px; */
