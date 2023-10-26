@@ -1,24 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 24px;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:opsz@5..1200&display=swap');
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
 }
+
+
 body{
-   
-  background-image: url(./TEAM_IMG/red-brown-brick-wall-background\ \(2\).jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  
+  /* background-image: url(./TEAM_IMG/red-brown-brick-wall-background\ \(2\).jpg); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-position: center;   */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 7s ease infinite;
+  background-size: 400% 400%;
 }
-.maincontainer{
+
+@keyframes gradient {
+  0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+}
+
+h1{
+  font-size: 4em;
+}
+
+h2{
+  color: white;
+  font-family: 'Playfair', serif;
+  FONT-WEIGHT: 200;
+  font-size: 4em;
+  filter: drop-shadow(2px 4px 6px black);
+  text-transform: uppercase;
+}
+
+.teams-container{
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 2em;
+}
+
+.card-box{
+  /* width: 90%; */
+  /* height: 100%; */
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  margin-top: 2em;
+}
+
+/* .maincontainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,20 +111,22 @@ body{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 8%;
-}
+    height: 15em;
+} */
 
-@media (max-width:768px){
+/* @media (max-width:768px){
     .seccard{
         display: flex;
         flex-wrap: wrap;
         gap: 120px;
         margin-top:20%;
+        height: 33em;
     }
-}
+} */
 
-@media (max-width:480px){
+/* @media (max-width:480px){
     .mainhead{
-        font-size: 3.4rem;
+        font-size: 2.4rem;
         letter-spacing: 10px;
         font-weight: 500;
     }
@@ -89,7 +140,7 @@ body{
     }
     .fa-facebook {
       color: #0c52a1;
-      /* font-weight: 800; */
+      font-weight: 800;
     }
     
     .fa-twitter {
@@ -104,7 +155,7 @@ body{
       font-family: sans-serif;
       width: 300px;
       height: 300px;
-      /* background-image: linear-gradient(to left top, #a40528, #9a003a, #890049, #730056, #57055f, #5a0a60, #5d0f62, #601363, #81145e, #9b1f55, #b0334c, #be4b42); */
+      background-image: linear-gradient(to left top, #a40528, #9a003a, #890049, #730056, #57055f, #5a0a60, #5d0f62, #601363, #81145e, #9b1f55, #b0334c, #be4b42);
       background-image: linear-gradient(to right top, #b9411a, #c95e12, #d67a05, #e09700, #e5b500, #e8b400, #eab400, #edb300, #ed9200, #ea7000, #e24a14, #d60f23);
       padding: 15px;
       border-radius: 50%;
@@ -118,11 +169,11 @@ body{
       height: 100%;
       transition: .2s;
       z-index: 99;
-      /* margin-bottom: 100px; */
-      /* bottom: 50px; */
+      margin-bottom: 100px;
+      bottom: 50px;
       
     }
-}
+} */
 
 
 
@@ -132,23 +183,29 @@ body{
     
 .profile-card {
     position: relative;
-    font-family: sans-serif;
-    width: 300px;
-    height: 300px;
-    /* background-image: linear-gradient(to left top, #a40528, #9a003a, #890049, #730056, #57055f, #5a0a60, #5d0f62, #601363, #81145e, #9b1f55, #b0334c, #be4b42); */
-    background-image: linear-gradient(to right top, #b9411a, #c95e12, #d67a05, #e09700, #e5b500, #e8b400, #eab400, #edb300, #ed9200, #ea7000, #e24a14, #d60f23);
+    /* width: 300px; */
+    /* height: 300px; */
+    width: 19em;
+    height: 19em;
+    /* background-image: linear-gradient(to right top, #b9411a, #c95e12, #d67a05, #e09700, #e5b500, #e8b400, #eab400, #edb300, #ed9200, #ea7000, #e24a14, #d60f23); */
+    background-color: rgba(0, 0, 0, 0.241);
+    backdrop-filter: blur(10px);
     padding: 15px;
     border-radius: 50%;
-    box-shadow: 0 0 22px #3336;
+    /* box-shadow: 0 0 22px #3336; */
     transition: .6s;
-    margin: 0 25px;
+    /* margin: 0 25px; */
   }
   
   .profile-card:hover {
     border-radius: 10px;
-    height: 310px;
-    box-shadow: 0 0 5px 3px black;
-    /* width:40%; */
+    height: 20em;
+    /* box-shadow: 0 0 5px 3px black; */
+  }
+
+  .profile-card .img img{
+    height: 100%;
+    width: 100%;
   }
   
   .profile-card .img {
@@ -157,28 +214,24 @@ body{
     height: 100%;
     transition: .6s;
     z-index: 99;
-    /* margin-bottom: 100px; */
-    /* bottom: 50px; */
-    
+    display: flex;
+    justify-content: center;   
   }
   
   .profile-card:hover .img {
-    transform: translateY(-80px);
-    /* transform: translateX(-20px); */
+    transform: translateY(-3.5em);
     
   }
   
   .img img {
     width: 100%;
     border-radius: 50%;
-   
     transition: .6s;
   }
   
   .profile-card:hover img {
     border-radius: 5%;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
   }
   
   .caption {
@@ -187,10 +240,7 @@ body{
     opacity: 0;
     transition: .6s;
     position: relative;
-    /* margin-bottom: 10%; */
-    bottom: 10px;
-    
-    /* top:20px; */
+    bottom: 10px;    
   }
   
   .profile-card:hover .caption {
@@ -199,7 +249,7 @@ body{
   
   .caption h3 {
     font-size: 30px;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     color: #fff;
     
   }
@@ -207,8 +257,8 @@ body{
   .caption p {
     font-size: 20px;
     color: #0c52a1;
-    font-family: sans-serif;
-    margin: 2px 0 9px 0;
+    /* font-family: sans-serif; */
+    /* margin: 2px 0 9px 0; */
     color: #333;
     font-weight: 900;
   }
@@ -222,10 +272,14 @@ body{
     text-align: center;
   }
 
+
+  .fab{
+    transition: all 0.2s ease-in-out;
+    font-size: 20px;
+  }
   
   .fa-facebook:hover {
     color: #0c52a1;
-    /* font-weight: 800; */
   }
   
   .fa-twitter:hover {
@@ -239,8 +293,26 @@ body{
   .profile-card:hover img {
     height: 85%;
     width: 90%;
-    position: relative;
-    /* left: 8px; */
-    top: 20px;
   }
+
+
+@media (max-width:770px) {
+  .card-box{
+    flex-direction: column;
+  }
+
+  h1{
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 520px) {
+  h1{
+    font-size: 2em;
+  }
+
+  h2{
+    font-size: 3em;
+  }
+}
   
